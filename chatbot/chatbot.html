@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Website Chatbot</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#chat-icon:hover {
+    transform: scale(1.1);
+}
+
+#chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(100%); /* Initially off-screen */
+    overflow: hidden;  /* Disable all scrolling */
+}
+
+#chat-box.visible {
+    transform: translateX(0); /* Slide in when visible */
+}
+
+#chat-header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+#close-chat {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#chat-content {
+    padding: 10px;
+    height: 230px;  /* Set fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px; /* Space between messages */
+    overflow-y: auto;  /* Allow vertical scrolling */
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between individual messages */
+    margin-bottom: 10px;
+    padding-bottom: 10px;  /* Ensure space at the bottom */
+}
+
+.user-message,
+.bot-message {
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 80%;
+    margin-bottom: 10px; /* Adds space below each message */
+    white-space: pre-wrap; /* Ensures whitespace and line breaks are preserved */
+    word-wrap: break-word; /* Allows long words to break and wrap to next line */
+}
+
+.user-message {
+    background-color: #007BFF;
+    color: white;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #f0f0f0;
+    color: black;
+    align-self: flex-start;
+}
+
+#chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    gap: 10px; /* Space between input field and button */
+}
+
+#chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#chat-input button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#chat-input button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Chat Icon (Arrow Button) -->
+    <div id="chat-icon">
+        <span>&#x2190;</span> <!-- Left Arrow Icon -->
+    </div>
+
+    <!-- Chatbox -->
+    <div id="chat-box" class="hidden">
+        <div id="chat-header">
+            <h2>Car Website Chatbot</h2>
+            <span id="close-chat">&#x2715;</span> <!-- Close Button -->
+        </div>
+        <div id="chat-content">
+            <div id="messages"></div> <!-- Container for chat messages -->
+        </div>
+        <div id="chat-input">
+            <input type="text" id="user-query" placeholder="Type your message..." />
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>

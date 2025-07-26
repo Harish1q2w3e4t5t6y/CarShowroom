@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Page</title>
+    <link rel="stylesheet" href="billing.css">
+    <link rel="stylesheet" href="include/navbar.css">
+     
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar"></div>
+    <div class="top-half"></div> <!-- This will cover the top half of the page -->
+    
+    <br>
+    <h1>Payment</h1>
+
+    <!-- Bill Box to display the detailed bill -->
+    <div class="bill-box" id="billDetails"></div>
+
+    <!-- Payment Section to display payment options -->
+    <div id="paymentSection"></div>
+
+    <div class="input-section">
+        <input type="text" id="inputTextBox" placeholder="Enter tracking id" />
+            
+        <button id="trackingid">View Tracking Id</button>
+    </div>
+
+    <!-- Loading and error messages will be dynamically injected here -->
+    <div id="loadingMessage" style="display: none;">Loading, please wait...</div>
+    <div id="errorMessage" style="display: none; color: red;"></div>
+
+    <!-- Include the QR Code library -->
+    <script src="jquery/qrcode.min.js"></script>
+    <!-- Include custom billing JavaScript -->
+    <script src="billing.js"></script>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    
+     
+</body>
+</html>

@@ -1,0 +1,100 @@
+  /* Add your custom styles here */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.top-half {
+    width: 100%;
+    height: 70vh;
+    background: url('image/bill.jpg') no-repeat center center / cover;
+}
+
+h1 {
+    font-size: 120px;
+    text-align: center;
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: #000;
+    font-family: 'Arial', sans-serif;
+    z-index: 10;
+    text-shadow: 10px 20px 18px rgba(0, 0, 0, 0.8);
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+.bill-box {
+    margin: 20px auto;
+    border: 1px solid #000000;
+    padding: 20px;
+    width: 80%;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #1d1d1d;
+    color: white;
+}
+
+/* Position the input box and button */
+.input-section {
+    
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-section input {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.input-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

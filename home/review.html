@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Reviews</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --mainColor: #ffffff;
+            --whiteColor: #1d1111;
+            --titleColor: #eaeaea;
+            --labelColor: #bbb;
+            --backgroundColor: #fffcfc;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: var(--backgroundColor);
+        }
+
+        .wrapper {
+            position: relative;
+            width: 40rem;
+            height: 50rem;
+            perspective: 1000px;
+        }
+
+        .form-container {
+            position: absolute;
+            width: 95%;
+            height: 95%;
+            background-color: var(--whiteColor);
+            border-radius: .5rem;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            transition: transform 1s ease, z-index 0.5s ease;
+            text-align: center;
+            padding: 2rem;
+            color: var(--titleColor);
+        }
+
+        .sign-in {
+            transform: translateX(0) rotateY(0);
+            z-index: 3;
+        }
+
+        .sign-up {
+            transform: translateX(150%) rotateY(-15deg);
+            z-index: 2;
+        }
+
+        .tata {
+            transform: translateX(-150%) rotateY(15deg);
+            z-index: 1;
+        }
+
+        /* Add animations for each rotation */
+        .wrapper.animated-signup .sign-in {
+            transform: translateX(-150%) rotateY(15deg);
+            z-index: 1;
+        }
+
+        .wrapper.animated-signup .sign-up {
+            transform: translateX(0) rotateY(0);
+            z-index: 3;
+        }
+
+        .wrapper.animated-signup .tata {
+            transform: translateX(150%) rotateY(-15deg);
+            z-index: 2;
+        }
+
+        .wrapper.animated-tata .sign-in {
+            transform: translateX(150%) rotateY(-15deg);
+            z-index: 2;
+        }
+
+        .wrapper.animated-tata .sign-up {
+            transform: translateX(-150%) rotateY(15deg);
+            z-index: 1;
+        }
+
+        .wrapper.animated-tata .tata {
+            transform: translateX(0) rotateY(0);
+            z-index: 3;
+        }
+
+        .content-title {
+            font-size: 2.5rem;
+            color: var(--titleColor);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-description {
+            font-size: 1.2rem;
+            color: var(--labelColor);
+            line-height: 1.5;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .link a {
+            color: var(--mainColor);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        /* Add hover effect for links */
+        .link a:hover {
+            text-decoration: underline;
+        }
+
+        .review-container {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .review-container img {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+        }
+
+        .review-container .stars {
+            color: gold;
+            margin-top: 0.5rem;
+            font-size: 2.5rem; /* Increased the size of the stars */
+        }
+
+        .review-container .review-text {
+            font-size: 1.2rem;
+            color: var(--labelColor);
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-container sign-in">
+            <div>
+                <h2 class="content-title">Karthik</h2>
+                <div class="review-container">
+                    <img src="https://via.placeholder.com/80" alt="Reviewer's Photo">
+                    <p class="content-description">"I recently purchased my dream car, and I couldn't be happier! The entire process was smooth, and the staff was incredibly helpful. From the moment I walked into the showroom, I felt welcomed and valued as a customer. The car itself is everything I wanted and more. It's not just a mode of transport—it's an experience!"</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    
+                </div>
+                <div class="link">
+                    <p>Want to read more reviews? <a href="#" class="signup-link">Go Next</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="form-container sign-up">
+            <div>
+                <h2 class="content-title">Vigneshwaran</h2>
+                <div class="review-container">
+                    <img src="https://via.placeholder.com/80" alt="Reviewer's Photo">
+                    <p class="content-description">"I’ve been driving this car for a few months now, and I have to say, I’m impressed. The fuel efficiency is incredible, and the interior is top-notch. I’ve taken it on a few weekend road trips, and it’s been a pleasure. Every time I get behind the wheel, I feel like I’m driving something special!"</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    
+                </div>
+                <div class="link">
+                    <p>Want to read more reviews? <a href="#" class="tata-link">Go Next</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="form-container tata">
+            <div>
+                <h2 class="content-title">Sathish Kumar</h2>
+                <div class="review-container">
+                    <img src="https://via.placeholder.com/80" alt="Reviewer's Photo">
+                    <p class="content-description">"After purchasing this car, I have to say it exceeded all my expectations. The driving experience is exceptional. I feel like I’m in control at all times, and the safety features give me peace of mind, especially on long trips. Plus, it’s just fun to drive!"</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    
+                </div>
+                <div class="link">
+                    <p>Want to read more reviews? <a href="#" class="signin-link">Go Next</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+        const signinLink = document.querySelector('.signin-link');
+        const signupLink = document.querySelector('.signup-link');
+        const tataLink = document.querySelector('.tata-link');
+
+        signupLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            wrapper.classList.add('animated-signup');
+            wrapper.classList.remove('animated-signin', 'animated-tata');
+        });
+
+        signinLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            wrapper.classList.add('animated-signin');
+            wrapper.classList.remove('animated-signup', 'animated-tata');
+        });
+
+        tataLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            wrapper.classList.add('animated-tata');
+            wrapper.classList.remove('animated-signup', 'animated-signin');
+        });
+    </script>
+</body>
+</html>

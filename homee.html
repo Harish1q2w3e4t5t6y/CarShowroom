@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <title>Car Showroom</title>
+    <link rel="stylesheet" href="homee.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="image/logo.png" alt="Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="topic">Home</a>
+                <a href="brands.html" class="topic">Brands</a>
+                <a href="#about" class="topic">About</a>
+                <a href="#review" class="topic">Review</a>
+                <a href="#contactUs" class="topic">Contact</a>
+            </div>
+        </nav>
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="video-container">
+            <video autoplay muted loop class="background-video">
+                <source src="video/4.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="content">
+            <h1 id="dynamic-text">Welcome to Luxuary Car Showroom</h1>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to our <span class="highlight">Car Showroom</span>! We are a trusted provider of premium cars, offering a wide range of models from top manufacturers. Whether you're looking for a sleek sedan, a sporty coupe, or a family-friendly SUV, we have something for everyone. Our mission is to provide our customers with high-quality vehicles and exceptional service, making your car-buying experience enjoyable and stress-free.</p>
+        <p>We pride ourselves on our knowledge of the automotive industry and our commitment to offering the best prices in the market. Our team is dedicated to helping you find the perfect vehicle that meets your needs and exceeds your expectations. From test drives to financing options, we are here to guide you every step of the way.</p>
+        <p>Visit us today and explore our extensive inventory. Whether you're a first-time buyer or a seasoned car enthusiast, we are confident that you will find the car of your dreams at our showroom!</p>
+    </section>
+
+    <!-- Main Content Iframes -->
+    <div class="iframe-container">
+       <!--  <iframe src="collection of image.html" title="Showroom Car Models"></iframe>-->
+         <iframe id = "review" class="ha" src="home/review.html" title="Showroom Reviews"></iframe>
+        <iframe class="ha" src="home/video in text.html" title="Showroom Videos"></iframe>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contactUs" class="contact-parlex">
+      <div class="parlex-back">
+        <div class="container">
+          <div class="row">
+            <div class="heading">
+              <h2>Contact Us</h2>
+              <br>
+              <p>Get in touch with us for more information or to schedule a visit.</p>
+            </div>
+          </div>
+          <div class="row mrgn30">
+            <form method="post" action="" id="contactfrm" role="form">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input class="form-control" type="text" name="name" id="name" placeholder="Your Name" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input class="form-control" type="email" name="email" id="email" placeholder="Your Email" />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" name="message" id="message" placeholder="Your Message" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn-primary">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fixed position iframe for chatbot -->
+  <div class="chatbot-container">
+    <iframe class="chatbot-iframe" src="chatbot/chatbot.html" title="Chatbot"></iframe>
+  </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Car Showroom. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

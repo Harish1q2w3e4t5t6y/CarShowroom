@@ -1,0 +1,345 @@
+ /* Basic Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Navigation Bar */
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+height: 80px;
+padding: 10px 50px;
+background: rgba(0, 0, 0, 0.8);
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+}
+
+@keyframes slowRotate {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+
+.logo img {
+height: 80px; /* Increase the logo size here */
+animation: slowRotate 10s linear infinite;
+}
+
+.logo img:hover {
+transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+}
+
+
+.nav-links {
+display: flex;
+align-items: center;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+margin: 0 18px;
+font-size: 1.8rem;
+padding: 10px 1;
+position: relative;
+transition: color 10s ease;
+}
+
+/* Underline Effect */
+.nav-links a::after {
+content: '';
+position: absolute;
+width: 100%;
+height: 3px;
+background: #ffffff;
+left: 0;
+bottom: -5px;
+transform: scaleX(0); /* Start hidden */
+transition: transform 1s ease;
+transform-origin: left; /* Start animation from left on hover */
+}
+
+.nav-links a:hover {
+color: #0a0a0a6e;
+}
+
+.nav-links a:hover::after {
+transform: scaleX(1); /* Expand underline from left to right */
+transform-origin: left; /* Ensures it starts from the left */
+}
+
+.nav-links a::after {
+transform-origin: right; /* Ensure it retracts from right to left */
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    z-index: 1;
+}
+
+.content h1 {
+    font-size: 60px;
+    font-family: 'Cinzel', serif;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Hover Color Change */
+.content h1:hover {
+    color: #1dbe00; /* Green color */
+}
+
+/* About Section */
+#about {
+    background: #f5f5f5;
+    color: #333;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+#about .highlight {
+    font-weight: bold;
+    color: #1dbe00;
+}
+
+/* Parallax Sections */
+.parallax {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.parallax .content {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    margin: 20px;
+}
+
+.parallax:nth-child(even) {
+    background: #333;
+}
+
+.parallax:nth-child(odd) {
+    background: #444;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Iframe Styling */
+.iframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+iframe {
+    width: 65%;
+    height: 320px;
+    border: 1px solid #ffffff;
+    border-radius: 1px;
+}
+
+.ha {
+    width: 120%;
+    height: 1000px;
+}
+
+/* Contact Form Styling */
+.contact-parlex {
+    background: #333;
+    color: white;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-parlex .container {
+    max-width: 600px; /* Limit the width of the form */
+    width: 100%;
+    text-align: center;
+}
+
+.contact-parlex .heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.contact-parlex .form-control {
+    width: 120%; /* Reduced width of input fields */
+    margin: 0 auto 25px; /* Center-align and add spacing */
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: 1px solid #666;
+}
+
+.contact-parlex label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+.contact-parlex .btn-primary {
+    background-color: #1dbe00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50%; /* Adjust button width */
+    margin: 0 auto; /* Center the button */
+    display: block;
+}
+
+.contact-parlex .btn-primary:hover {
+    background-color: #16a085;
+}
+
+h2 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* chat bot  */
+.iframe-container {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+}
+iframe {
+width: 52.4%;
+height: 300px;
+border: 1px solid #ffffff;
+border-radius: 1px;
+}
+.chatbot-container {
+position: fixed;
+bottom: 20px;      /* Position near the bottom */
+right: 20px;       /* Position near the right */
+width: 300px;
+height: 500px;
+z-index: 1000;     /* Keep it on top */
+
+border-radius: 10px;
+overflow: hidden;
+}
+.chatbot-iframe {
+width: 100%;
+height: 100%;
+border: none;
+}

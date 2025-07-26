@@ -1,0 +1,28 @@
+
+-- Create a table to store questions and responses
+CREATE TABLE chatbot_responses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    question VARCHAR(255) NOT NULL,
+    answer TEXT NOT NULL
+);
+
+-- Insert some sample data
+INSERT INTO chatbot_responses (question, answer) VALUES
+("how to buy a car", "You have to select the brand and model with parts then click the buy button."),
+("hello", "How can I help you?");
+
+INSERT INTO chatbot_responses (question, answer) VALUES
+("how to buy a car", "You have to select the brand and model with parts, then click the buy button."),
+("hello", "How can I help you?"),
+("how to select a brand", "To select a brand, navigate to the 'Brands' section and click on your preferred brand."),
+("how to select a model", "After choosing a brand, select a model from the available options for that brand."),
+("how to choose car parts", "You can choose additional parts and accessories from the 'Parts' section after selecting your car model."),
+("where can i view my bill", "Once you've completed your selections, click 'View Bill' to see a summary of your purchases and total price."),
+("how to proceed to payment", "After reviewing your bill, click 'Proceed to Payment' to complete your purchase."),
+("can i see car features", "Yes, you can see detailed car features on the model's page before making a purchase."),
+("what payment methods are available", "We accept credit cards, debit cards, and online bank transfers."),
+("how can i contact support", "You can contact support by clicking on the 'Support' tab or calling our helpline at 1-800-CAR-HELP."),
+("how to apply for financing", "To apply for financing, go to the 'Financing' section and fill out the application form."),
+("can i schedule a test drive", "Yes, you can schedule a test drive by selecting a model and clicking 'Book Test Drive.'"),
+("what documents are needed to buy a car", "You will need a valid ID and proof of insurance to complete your car purchase.")
+;

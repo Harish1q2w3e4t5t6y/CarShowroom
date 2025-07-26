@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="models.css">
+    <link rel="stylesheet" href="include/navbar.css">
+    <title>Car Models</title>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div></div>
+    </div>
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar"></div>
+
+    <section class="hero">
+        <h1 id="brand-title">Models for <span id="brand-name"></span></h1>
+    </section>
+
+    <div class="model-gallery" id="model-gallery">
+        <!-- Car models will be populated here dynamically -->
+    </div>
+
+    <!-- Modal container -->
+    <div id="carDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <iframe id="carDetailsIframe" frameborder="0" style="width: 100%; height: 400px;"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Car Showroom. All rights reserved.</p>
+    </footer>
+
+    <script src="models.js"></script>
+</body>
+</html>
