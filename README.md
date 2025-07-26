@@ -40,19 +40,10 @@ A modern, interactive car showroom website designed with stylish animations, par
 ### 🧾 Bill / Purchase Section
 - Integrated QR code generation (`qr.js`) for payment or summary view
 
----
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript, jQuery
 - **Animations**: CSS Transforms (`rotateY`, `translateX`, `scale`), `jquery.easing.min.js`
 - **Effects**: Parallax Scroll, Dot Indicators, QR Generator (`qr.js`)
-
----
-
-
- 
----
-
-## 📂 Folder Structure
 
